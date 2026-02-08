@@ -1,0 +1,9 @@
+# robots.txt for Global Tech Solutions
+User-agent: *
+Allow: /
+
+# Sitemaps
+Sitemap: https://globaltechsolutions.in/sitemap.xml
+
+# Crawl-delay
+Crawl-delay: 1

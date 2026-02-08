@@ -1,0 +1,156 @@
+/**
+ * Codexbit Design System - CSS Variables
+ * Google Antigravity-inspired LIGHT theme
+ * Clean, minimal, professional
+ */
+
+@layer base {
+   :root {
+      /* ─────────────────────────────────────────────────────────
+       CORE BACKGROUNDS (Light theme)
+       ───────────────────────────────────────────────────────── */
+      --bg-default: #F8F9FB;
+      /* Soft off-white base */
+      --bg-surface-1: #F5F6F8;
+      /* Slightly darker surface */
+      --bg-surface-2: #F0F1F3;
+      /* Light grey surface */
+      --bg-surface-dark: linear-gradient(180deg, #0F0F12 0%, #1A1B22 100%);
+      /* Dark section gradient */
+      --border-subtle: rgba(0, 0, 0, 0.08);
+      --border-medium: rgba(0, 0, 0, 0.15);
+
+      /* Legacy aliases */
+      --bg-elev-1: var(--bg-surface-1);
+      --bg-elev-2: var(--bg-surface-2);
+      --bg-elev-3: #EEEEEE;
+
+      /* ─────────────────────────────────────────────────────────
+       TEXT COLORS (Dark on light)
+       ───────────────────────────────────────────────────────── */
+      --text-primary: #1A1A1A;
+      /* Near black */
+      --text-secondary: #5F6368;
+      /* Google grey */
+      --muted: #9AA0A6;
+      /* Muted grey */
+      --text-inverse: #FFFFFF;
+      /* White text on dark */
+
+      /* ─────────────────────────────────────────────────────────
+       ACCENT COLORS (Brand Palette)
+       ───────────────────────────────────────────────────────── */
+      --accent-primary: #6C63FF;
+      /* Primary brand purple */
+      --accent-secondary: #8B9CFF;
+      /* Supporting accent blue */
+      --accent-tertiary: #C77DFF;
+      /* Supporting accent purple */
+      --accent-blue: #4285F4;
+      /* Google blue for dots */
+      --accent-blue-light: #8AB4F8;
+      /* Lighter blue */
+
+      /* Functional colors */
+      --color-success: #34A853;
+      /* Google green */
+      --color-warning: #FBBC04;
+      /* Google yellow */
+      --color-error: #EA4335;
+      /* Google red */
+
+      /* Legacy aliases */
+      --accent-cta: var(--accent-primary);
+      --accent-green: var(--color-success);
+      --accent-yellow: var(--color-warning);
+      --accent-red: var(--color-error);
+
+      /* ─────────────────────────────────────────────────────────
+       UI TOKENS
+       ───────────────────────────────────────────────────────── */
+      --radius-lg: 24px;
+      --radius-md: 12px;
+      --radius-sm: 8px;
+      --radius-xs: 4px;
+      --radius-pill: 100px;
+
+      --gap: 24px;
+      --gap-lg: 48px;
+      --gap-xl: 80px;
+      --space-sm: 8px;
+      --space-md: 16px;
+      --space-lg: 32px;
+
+      /* ─────────────────────────────────────────────────────────
+       SHADOWS (Soft neumorphism)
+       ───────────────────────────────────────────────────────── */
+      --shadow-sm: 0 1px 3px rgba(0, 0, 0, 0.06), 0 1px 2px rgba(0, 0, 0, 0.04);
+      --shadow-md: 0 4px 12px rgba(0, 0, 0, 0.08);
+      --shadow-lg: 0 12px 40px rgba(0, 0, 0, 0.12);
+      
+      /* Neumorphic shadows */
+      --shadow-neumorphic-light: 4px 4px 8px rgba(0, 0, 0, 0.08), -4px -4px 8px rgba(255, 255, 255, 0.9);
+      --shadow-neumorphic-dark: 4px 4px 8px rgba(0, 0, 0, 0.2), -4px -4px 8px rgba(255, 255, 255, 0.05);
+      --shadow-neumorphic-hover: 6px 6px 12px rgba(0, 0, 0, 0.1), -6px -6px 12px rgba(255, 255, 255, 0.95);
+
+      /* ─────────────────────────────────────────────────────────
+       TYPOGRAPHY (Google Sans-like)
+       ───────────────────────────────────────────────────────── */
+      --font-heading: 'Inter', system-ui, -apple-system, "Segoe UI", Roboto, sans-serif;
+      --font-body: 'Inter', system-ui, -apple-system, "Segoe UI", Roboto, sans-serif;
+      --font-mono: 'Roboto Mono', 'Fira Code', monospace;
+
+      /* Typographic scale - Antigravity style */
+      --h1: clamp(36px, 5vw, 64px);
+      --h2: clamp(28px, 4vw, 44px);
+      --h3: clamp(20px, 2.5vw, 28px);
+      --h4: 20px;
+      --body: 16px;
+      --small: 14px;
+      --tiny: 12px;
+
+      /* Line heights */
+      --lh-heading: 1.2;
+      --lh-body: 1.6;
+
+      /* Letter spacing */
+      --ls-tight: -0.02em;
+      --ls-normal: 0;
+      --ls-wide: 0.01em;
+
+      /* ─────────────────────────────────────────────────────────
+       LAYOUT
+       ───────────────────────────────────────────────────────── */
+      --max-width: 1200px;
+      --gutter: 48px;
+      --gutter-mobile: 24px;
+
+      /* ─────────────────────────────────────────────────────────
+       TRANSITIONS (Smooth, professional)
+       ───────────────────────────────────────────────────────── */
+      --transition-fast: 150ms ease;
+      --transition-normal: 250ms ease;
+      --transition-slow: 400ms cubic-bezier(0.25, 0.1, 0.25, 1);
+      --ease-out-expo: cubic-bezier(0.16, 1, 0.3, 1);
+
+      /* ─────────────────────────────────────────────────────────
+       Z-INDEX SCALE
+       ───────────────────────────────────────────────────────── */
+      --z-base: 1;
+      --z-header: 100;
+      --z-dropdown: 200;
+      --z-modal: 300;
+      --z-overlay: 400;
+   }
+
+   /* ─────────────────────────────────────────────────────────
+     REDUCED MOTION PREFERENCES
+     ───────────────────────────────────────────────────────── */
+   @media (prefers-reduced-motion: reduce) {
+      :root {
+         --transition-fast: 0ms;
+         --transition-normal: 0ms;
+         --transition-slow: 0ms;
+      }
+   }
+}
