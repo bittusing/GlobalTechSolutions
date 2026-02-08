@@ -3,7 +3,6 @@ import { updatePageSEO } from '../utils/seo'
 import { useScrollAnimation } from '../hooks/useScrollAnimation'
 
 // Product images
-import boomghoomLogo from '../assets/boomghoom_logo.png'
 import boomghoomPoster from '../assets/boomghoom_poster.png'
 import connectCrmLogo from '../assets/ConnectCrm_logo.webp'
 
@@ -15,7 +14,6 @@ import domainHosting from '../assets/domainandhosting.png'
 import crmErp from '../assets/crmanderp.png'
 import maintenance from '../assets/Maintenance.png'
 import testing from '../assets/testing.png'
-import moreServices from '../assets/more.png'
 
 // Client work images
 import connectingHeartImg from '../assets/connectingheart.png'

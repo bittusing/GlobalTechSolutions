@@ -33,12 +33,12 @@ export default function Header() {
                         {/* Logo */}
                         <Link to="/" className="header__logo" aria-label="Global Tech Solutions Home">
                             <img
-                                src="/iconlogo.png"
+                                src="/logo.jpeg"
                                 alt="Global Tech Solutions"
                                 className="header__logo-icon"
                                 loading="eager"
                                 decoding="async"
-                                width="50"
+                                width="180"
                                 height="50"
                             />
                         </Link>
