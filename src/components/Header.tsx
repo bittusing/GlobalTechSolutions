@@ -35,11 +35,8 @@ export default function Header() {
                             <img
                                 src="/logo.jpeg"
                                 alt="Global Tech Solutions"
-                                className="header__logo-icon"
                                 loading="eager"
                                 decoding="async"
-                                width="180"
-                                height="50"
                             />
                         </Link>
 

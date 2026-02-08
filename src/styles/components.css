@@ -330,28 +330,14 @@
     }
 
     .header__logo img {
+        height: 40px;
         width: auto;
+        object-fit: contain;
     }
-
-    .header__logo-icon {
-        /* Hidden on desktop, shown on mobile */
-        display: none;
-    }
-
-    .header__logo-wordmark {
-        height: 32px;
-        width: auto;
-    }
-
 
     @media (max-width: 768px) {
-        .header__logo-wordmark {
-            display: none;
-        }
-
-        .header__logo-icon {
-            display: block;
-            height: 50px;
+        .header__logo img {
+            height: 36px;
         }
     }
 
