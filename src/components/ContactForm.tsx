@@ -4,6 +4,7 @@ import emailjs from '@emailjs/browser'
 interface FormData {
     name: string
     email: string
+    mobile: string
     company: string
     message: string
     interest: string
@@ -13,19 +14,21 @@ interface FormData {
 interface FormErrors {
     name?: string
     email?: string
+    mobile?: string
     message?: string
 }
 
 // EmailJS Configuration
-const EMAILJS_SERVICE_ID = 'service_9rjgyok'
-const EMAILJS_TEMPLATE_ID = 'template_4jmn37s'
-const EMAILJS_PUBLIC_KEY = '4VbRMpQ0mDgCTVQfG'
+const EMAILJS_SERVICE_ID = 'service_0uio6jy'
+const EMAILJS_TEMPLATE_ID = 'template_ka7nlte'
+const EMAILJS_PUBLIC_KEY = 'o0Tqv-uae4TAffopV'
 
 export default function ContactForm() {
     const formRef = useRef<HTMLFormElement>(null)
     const [formData, setFormData] = useState<FormData>({
         name: '',
         email: '',
+        mobile: '',
         company: '',
         message: '',
         interest: 'product',
@@ -42,6 +45,11 @@ export default function ContactForm() {
         return /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email)
     }
 
+    const validateMobile = (mobile: string) => {
+        // Indian mobile number validation: 10 digits, optionally starting with +91
+        return /^(\+91)?[6-9]\d{9}$/.test(mobile.replace(/\s/g, ''))
+    }
+
     const validate = (): boolean => {
         const newErrors: FormErrors = {}
 
@@ -53,6 +61,12 @@ export default function ContactForm() {
             newErrors.email = 'Email is required'
         } else if (!validateEmail(formData.email)) {
             newErrors.email = 'Please enter a valid email address'
+        }
+
+        if (!formData.mobile.trim()) {
+            newErrors.mobile = 'Mobile number is required'
+        } else if (!validateMobile(formData.mobile)) {
+            newErrors.mobile = 'Please enter a valid 10-digit mobile number'
         }
 
         if (!formData.message.trim()) {
@@ -107,6 +121,7 @@ export default function ContactForm() {
             const templateParams = {
                 name: formData.name,
                 email: formData.email,
+                mobile: formData.mobile,
                 company: formData.company || 'Not provided',
                 interest: formData.interest,
                 message: formData.message,
@@ -126,6 +141,7 @@ export default function ContactForm() {
             setFormData({
                 name: '',
                 email: '',
+                mobile: '',
                 company: '',
                 message: '',
                 interest: 'product',
@@ -264,6 +280,28 @@ export default function ContactForm() {
                 {errors.email && (
                     <p id="email-error" className="form-error" role="alert">
                         {errors.email}
+                    </p>
+                )}
+            </div>
+
+            <div className="form-group">
+                <label htmlFor="mobile" className="form-label form-label--required">
+                    Mobile Number
+                </label>
+                <input
+                    type="tel"
+                    id="mobile"
+                    name="mobile"
+                    value={formData.mobile}
+                    onChange={handleChange}
+                    className={`form-input ${errors.mobile ? 'form-input--error' : ''}`}
+                    placeholder="+91 9315857918"
+                    aria-describedby={errors.mobile ? 'mobile-error' : undefined}
+                    aria-invalid={!!errors.mobile}
+                />
+                {errors.mobile && (
+                    <p id="mobile-error" className="form-error" role="alert">
+                        {errors.mobile}
                     </p>
                 )}
             </div>
