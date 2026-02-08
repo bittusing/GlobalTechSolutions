@@ -13,11 +13,10 @@ export default function Footer() {
                     <div className="footer-premium__brand">
                         <div className="footer-premium__logo">
                             <img 
-                                src="/iconlogo.png" 
+                                src="/logo.jpeg" 
                                 alt="Global Tech Solutions" 
                                 decoding="async"
-                                width="60"
-                                height="60"
+                                style={{ height: '50px', width: 'auto' }}
                             />
                         </div>
                         <h3 className="footer-premium__tagline">Engineering Intelligence. Building What's Next.</h3>
