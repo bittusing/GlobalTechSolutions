@@ -113,7 +113,7 @@ export default function Home() {
         <>
             {/* Hero Section */}
             <Hero
-                headline={"Engineering Intelligence.\nBuilding What’s Next."}
+                headline={"Global Tech Solution – Software Company in Lucknow"}
                 subheadline="We design and build scalable digital solutions across AI, web, automation, and cloud systems."
                 primaryCta={{
                     label: "Partner with Us",

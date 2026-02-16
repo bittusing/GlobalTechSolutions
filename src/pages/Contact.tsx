@@ -94,8 +94,8 @@ export default function Contact() {
                             Ready to start your next project?
                         </h1>
                         <p className="contact-premium-hero__description">
-                            Whether you have a clear vision or just an idea, we're here to help bring it to life. 
-                            Let's discuss how we can work together to create something extraordinary.
+                            Based in Lucknow, we provide IT services including website development, custom software solutions, and digital consulting. 
+                            Whether you have a clear vision or just an idea, we're here to help bring it to life.
                         </p>
                     </div>
                 </div>
@@ -123,7 +123,7 @@ export default function Contact() {
                             <div className="contact-premium-info__header">
                                 <h3 className="contact-premium-info__title">Get in touch</h3>
                                 <p className="contact-premium-info__description">
-                                    Prefer to reach out directly? Here are all the ways you can contact us.
+                                    Located in Lucknow, Uttar Pradesh, we're ready to help with your software development needs. Here are all the ways you can contact us.
                                 </p>
                             </div>
 
@@ -207,6 +207,30 @@ export default function Contact() {
                                 </div>
                             </div>
                         </div>
+                    </div>
+                </div>
+            </section>
+
+            {/* Map Section */}
+            <section className="contact-premium-map">
+                <div className="container">
+                    <div className="contact-premium-map__header">
+                        <h2 className="contact-premium-map__title">Visit Our Office in Lucknow</h2>
+                        <p className="contact-premium-map__description">
+                            Our office is located in Jankipuram, Lucknow. We welcome clients to visit us for in-person consultations and project discussions.
+                        </p>
+                    </div>
+                    <div className="contact-premium-map__container">
+                        <iframe
+                            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3559.4982!2d80.9!3d26.9!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zMjbCsDU0JzAwLjAiTiA4MMKwNTQnMDAuMCJF!5e0!3m2!1sen!2sin!4v1234567890"
+                            width="100%"
+                            height="450"
+                            style={{ border: 0, borderRadius: '12px' }}
+                            allowFullScreen
+                            loading="lazy"
+                            referrerPolicy="no-referrer-when-downgrade"
+                            title="Global Tech Solution Office Location in Lucknow"
+                        ></iframe>
                     </div>
                 </div>
             </section>

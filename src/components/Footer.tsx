@@ -26,11 +26,14 @@ export default function Footer() {
                         <div className="footer-premium__contact">
                             <div className="footer-premium__contact-item">
                                 <MapPin size={16} />
-                                <span>9/304 Old Malhar Sahara States, Jankipuram, Lucknow 226021</span>
+                                <span>9/304 Old Malhar Sahara States<br />Jankipuram, Lucknow 226021<br />Uttar Pradesh, India</span>
                             </div>
                             <div className="footer-premium__contact-item">
                                 <Mail size={16} />
                                 <span>Globaltechsolutions.up@gmail.com</span>
+                            </div>
+                            <div className="footer-premium__contact-item">
+                                <span>Phone: +91 73880 10007 | +91 90444 71115</span>
                             </div>
                         </div>
                     </div>
@@ -137,6 +140,26 @@ export default function Footer() {
                     </div>
                 </div>
             </div>
+
+            {/* LocalBusiness Schema Markup */}
+            <script type="application/ld+json" dangerouslySetInnerHTML={{
+                __html: JSON.stringify({
+                    "@context": "https://schema.org",
+                    "@type": "LocalBusiness",
+                    "name": "Global Tech Solution",
+                    "address": {
+                        "@type": "PostalAddress",
+                        "streetAddress": "9/304 Old Malhar Sahara States, Jankipuram",
+                        "addressLocality": "Lucknow",
+                        "postalCode": "226021",
+                        "addressRegion": "Uttar Pradesh",
+                        "addressCountry": "India"
+                    },
+                    "telephone": ["+91-73880-10007", "+91-90444-71115"],
+                    "email": "Globaltechsolutions.up@gmail.com",
+                    "url": "https://www.globaltech.ind.in/"
+                })
+            }} />
         </footer>
     )
 }
